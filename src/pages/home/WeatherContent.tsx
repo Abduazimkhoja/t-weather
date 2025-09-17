@@ -3,10 +3,6 @@ import type { GetWeatherByCityResponse } from "@/store/services";
 export function WeatherContent({ weatherData }: Props) {
 	return (
 		<>
-			{/* <header className="text-center">
-				<span className="">the.weather</span>
-			</header> */}
-
 			<div className="root-image-wrap">
 				<img alt="" className="" src="https://i.imgur.com/M8VyA2h.png" />
 			</div>

@@ -130,7 +130,6 @@
   font-size: 13px;
 }
 
-
 .image-wrap {
   height: 30px;
   width: 30px;
@@ -149,9 +148,18 @@
 }
 
 .root-image-wrap {
+  aspect-ratio: 1/1;
+  max-height: 500px;
+  height: 100%;
   margin-left: auto;
 
   /* position: absolute; */
+}
+
+.root-image-wrap img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .info {
@@ -160,8 +168,8 @@
   gap: 20px;
   max-width: 800px;
   margin-left: auto;
-  padding-left: 30px;
-	margin-bottom: 50px;
+  padding-inline: 30px;
+  margin-bottom: 50px;
 }
 /* scale: 1.5;
   max-width: 500px;

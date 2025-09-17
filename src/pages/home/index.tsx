@@ -15,7 +15,6 @@ export function HomePage() {
 		searchParams: { q: selectedCity },
 	});
 
-	// if (isLoading) return <PageLoading />;
 	if (error) return <PageError errorMessage="error" />;
 	if (!data && !isLoading) return <EmptyData />;
 
