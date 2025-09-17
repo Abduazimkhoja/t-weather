@@ -8,7 +8,7 @@ export function Sidebar({ weatherData }: Props) {
 
 			<hr className="divider" />
 
-			<div className="sidebar-container">
+			<div className="sidebar-container ">
 				<h3 className="sidebar__details-heading">Weather Details</h3>
 				<ul className="details__list light-text">
 					<li className="details__item">

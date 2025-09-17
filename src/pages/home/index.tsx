@@ -20,8 +20,14 @@ export function HomePage() {
 	if (!data && !isLoading) return <EmptyData />;
 
 	return (
-		<main className={cn("wrapper", "flex justify-between")}>
-			<section>{!isLoading && <WeatherContent weatherData={data} />}</section>
+		<main
+			className={cn("wrapper", "flex justify-between", {
+				"dark-wrapper": data?.weather?.[0].main === "Clouds",
+			})}
+		>
+			<section className="flex-y-center w-full info">
+				{!isLoading && <WeatherContent weatherData={data} />}
+			</section>
 
 			<aside className="sidebar">
 				{!isLoading && <Sidebar weatherData={data} />}
