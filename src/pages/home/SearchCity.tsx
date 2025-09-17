@@ -9,7 +9,8 @@ export function SearchCity() {
 	const [query, setQuery] = useState("");
 
 	const searchedCityList = uzCitiesList.filter(
-		(name) => query === null || name.includes(query),
+		(name) =>
+			query === null || name.toLowerCase().includes(query.toLowerCase()),
 	);
 
 	const selectedCity = useAppSelector((state) => state.city.selectedCity);
