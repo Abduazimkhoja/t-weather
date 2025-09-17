@@ -12,7 +12,7 @@ const initialState: SelectedCityState = {
 	lastWeather: null,
 };
 
-const selectedCitySlice = createSlice({
+const citySlice = createSlice({
 	name: "selectedCity",
 	initialState,
 	reducers: {
@@ -31,5 +31,5 @@ const selectedCitySlice = createSlice({
 	},
 });
 
-export const { setSelectedCity, setLastWeather } = selectedCitySlice.actions;
-export const selectedCityReducer = selectedCitySlice.reducer;
+export const { setSelectedCity, setLastWeather } = citySlice.actions;
+export const selectedCityReducer = citySlice.reducer;

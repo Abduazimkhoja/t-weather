@@ -5,5 +5,5 @@ import { themeReducer } from './theme.slice';
 export const sliceReducers = {
   lang: langReducer,
   theme: themeReducer,
-	selectedCity: selectedCityReducer
+	city: selectedCityReducer
 };

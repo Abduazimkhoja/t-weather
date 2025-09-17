@@ -34,7 +34,7 @@ export const openWeatherApi = createApi({
 				url: baseUrl({
 					endpoints: ["data", "2.5", "weather"],
 					queryParams: {
-						lang: "ru",
+						lang: "en",
 						units: "metric",
 						...searchParams,
 						appid: ENV.OPEN_WEATHER_KEY,

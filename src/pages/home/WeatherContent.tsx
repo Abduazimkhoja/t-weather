@@ -2,7 +2,7 @@ import type { GetWeatherByCityResponse } from "@/store/services";
 
 export function WeatherContent({ weatherData }: Props) {
 	return (
-		<section className="card1 col-lg-8 col-md-7">
+		<>
 			<header className="text-center">
 				<span className="">the.weather</span>
 				<img
@@ -37,7 +37,7 @@ export function WeatherContent({ weatherData }: Props) {
 					<small>{weatherData.weather[0].main}</small>
 				</div>
 			</div>
-		</section>
+		</>
 	);
 }
 interface Props {

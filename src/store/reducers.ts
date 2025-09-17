@@ -6,7 +6,7 @@ import { sliceReducers } from "./slices/slice.reducers";
 
 const persistWhiteList: (keyof typeof sliceReducers)[] = [
 	"lang",
-	"selectedCity",
+	"city",
 	"theme",
 ];
 

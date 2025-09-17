@@ -1,6 +1,9 @@
 import { Search } from "lucide-react";
 import { useState } from "react";
 import { uzCitiesList } from "@/consts/cities.const";
+import { cn } from "@/shared/lib/cn";
+import { useAppDispatch, useAppSelector } from "@/store/redux-hooks";
+import { setSelectedCity } from "@/store/slices";
 
 export function SearchCity() {
 	const [query, setQuery] = useState("");
@@ -8,6 +11,9 @@ export function SearchCity() {
 	const searchedCityList = uzCitiesList.filter(
 		(name) => query === null || name.includes(query),
 	);
+
+	const selectedCity = useAppSelector((state) => state.city.selectedCity);
+	const dispatch = useAppDispatch();
 
 	return (
 		<div>
@@ -30,7 +36,13 @@ export function SearchCity() {
 					<li className="light-text">No results</li>
 				) : (
 					searchedCityList.map((name) => (
-						<li className="light-text" key={name}>
+						<li
+							onClick={() => dispatch(setSelectedCity(name))}
+							className={cn("light-text", {
+								active: selectedCity.toLowerCase() === name.toLowerCase(),
+							})}
+							key={name}
+						>
 							{name}
 						</li>
 					))

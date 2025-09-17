@@ -3,7 +3,7 @@ import { SearchCity } from "./SearchCity";
 
 export function Sidebar({ weatherData }: Props) {
 	return (
-		<aside className="sidebar">
+		<>
 			<SearchCity />
 
 			<hr className="divider" />
@@ -31,7 +31,7 @@ export function Sidebar({ weatherData }: Props) {
 			</div>
 
 			<hr className="divider" />
-		</aside>
+		</>
 	);
 }
 
