@@ -1,8 +1,5 @@
 import * as z from "zod";
-import {
-	idSchema,
-	localizedStringSchema,
-} from "@/shared/schemas/shared.schema";
+import { idSchema, localizedStringSchema } from "@/shared/schemas/shared.schema";
 
 // Response Schema
 export function apiResponseSchema<T>(dataSchema: T) {
