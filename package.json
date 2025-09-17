@@ -1,0 +1,53 @@
+{
+	"name": "admin-template",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"start": "vite preview -port 4000",
+		"lint": "biome lint",
+		"lint:fix": "biome lint --write",
+		"format": "biome format --write",
+		"typecheck": "tsc --noEmit",
+		"prepare": "husky",
+		"lint:staged": "lint-staged"
+	},
+	"lint-staged": {
+		"*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+			"biome check --write --no-errors-on-unmatched"
+		],
+		"messages/*.json": [
+			"i18n-check -l messages -s ru --format i18next -o src"
+		]
+	},
+	"dependencies": {
+		"@reduxjs/toolkit": "2.9.0",
+		"clsx": "^2.1.1",
+		"husky": "^9.1.7",
+		"js-cookie": "^3.0.5",
+		"jwt-decode": "^4.0.0",
+		"lucide-react": "^0.544.0",
+		"nuqs": "^2.6.0",
+		"react": "19.1.1",
+		"react-dom": "19.1.1",
+		"react-hook-form": "^7.62.0",
+		"react-redux": "9.2.0",
+		"react-router-dom": "7.9.1",
+		"react-svg": "16.3.0",
+		"redux-persist": "6.0.0",
+		"zod": "^4.1.9"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.4",
+		"@types/js-cookie": "^3.0.6",
+		"@types/node": "24.5.0",
+		"@types/react": "19.1.13",
+		"@types/react-dom": "19.1.9",
+		"@vitejs/plugin-react": "5.0.2",
+		"globals": "16.4.0",
+		"typescript": "5.9.2",
+		"vite": "^7.1.5"
+	}
+}
